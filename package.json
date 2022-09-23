@@ -1,0 +1,17 @@
+{
+  "name": "13_mailregister",
+  "version": "1.0.0",
+  "description": "A reigstratioan form with mail notification functionality, i.e., whenever a new user registers a mail will send to the admin of the new user request.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vivek Tripathi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "nodemailer": "^6.7.8"
+  }
+}
