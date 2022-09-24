@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A reigstratioan form with mail notification functionality, i.e., whenever a new user registers a mail will send to the admin of the new user request.",
   "main": "app.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
