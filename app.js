@@ -25,7 +25,7 @@ app.post("/send", (req, res)=>{
         <h3>Details</h3>
         <ul>
             <li>Name: ${req.body.name}</li>
-            <li>Phone: ${req.body.phone}</li>
+            <li>Phone: <a href="https://api.whatsapp.com/send/?phone=+91${req.body.phone}&text=Hii ${req.body.name} &#128075;">${req.body.phone}</a></li>
             <li>Mail: ${req.body.email}</li>
             <li>Company: ${req.body.company}</li>
             <li>Date: ${req.body.date}</li>
