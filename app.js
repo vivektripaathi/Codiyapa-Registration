@@ -16,25 +16,60 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.get("/", (req, res)=>{
-    res.render('contact', {success: ''});
+    res.render('register', {success: ''});
 });
 
 app.post("/send", (req, res)=>{
     console.log(req.body);
+    var service = req.body.service
+    var str= "";
+    if(service == "Coding Solution"){
+      str = `
+        <ul>
+        <li>Date:  ${req.body.date}</li>
+        <li>Company:  ${req.body.company}</li>
+        <li>Time:  ${req.body.time}</li>
+        </ul>
+        `; 
+    }
+    else if(service == "College Project"){
+      str = `
+        <ul>
+        <li>Date:  ${req.body.date}</li>
+        <li>Project Type:  ${req.body.ProjectType}</li>
+        </ul>
+        `; 
+    }
+    else if(service == "College Assignment"){
+        str = `
+        <ul>
+        <li>Date:  ${req.body.date}</li>
+        <li>Semeseter:  ${req.body.semeseter}</li>
+        </ul>
+        `; 
+    }
+    else if(service == "Reasoning & Aptitude"){
+      str = `
+        <ul>
+        <li>Date:  ${req.body.date}</li>
+        <li>Time:  ${req.body.time}</li>
+        </ul>
+        `; 
+    }
     const output = `
         <h3>Details</h3>
         <ul>
             <li>Name: ${req.body.name}</li>
             <li>Phone: <a href="https://api.whatsapp.com/send/?phone=+91${req.body.phone}&text=Hii ${req.body.name} &#128075;">${req.body.phone}</a></li>
             <li>Mail: ${req.body.email}</li>
-            <li>Company: ${req.body.company}</li>
-            <li>Date: ${req.body.date}</li>
-            <li>Time: ${req.body.time}</li>
+            <li>Service : ${service}</li>
+        </ul>
+        ${str}
+        <ul>
             <li>Description: ${req.body.message}</li>
         </ul>
         <p>Contact Team is kindly requsted to make contact with him/her as soon as possible</p>
     `;
-
       let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -56,7 +91,7 @@ app.post("/send", (req, res)=>{
         }
         console.log('Message sent: %s', info.messageId);   
         console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-        res.render('contact', {success: 'Success'});
+        res.render('register', {success: 'Success'});
         res.redirect("/");
       });
 });

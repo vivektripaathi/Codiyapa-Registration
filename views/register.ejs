@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="google-site-verification" content="yZ4tBq-WFtMq4oms8fuQDhhLo2jVBm7VOdl9X86chQQ" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="HTML, CSS, JavaScript,JAVA,PYTHON,C, C++, CPP, JOB, JOB HELPER, JOB SEARCH , TCS , WIPRO, MICROSOFT , GOOGLE , ACCENTURE, CAPGEMINI, PAYTM , IBM,META, PHONEPE, FACEBOOK, APPLE, ALPHABET, QUALCOMM, QUORA , CHETU, CHEGG, CHEGG INDIA, CHEGG CODING SOLUTION, TOP MNC, HCL, INDIAN RAILWAY, JOB SEARCH, CODING ROUND HELP , CODING SOLUTION, INTERVIEW SOLUTION, TCS SOLUTION , MICROSOFT SOLUTION, WIPRO SOLUTIONS, EXAM HELPER, CODING TEST SOLUTION , CODING NINJA , HACKERRANK SOLUTION, GEEKSFORGEEKS SOLUTION , GFG SOLUTIONS , CC SOLUTION , CF SOLUTION , COLLEGE PROJECTS, MAJOR PROJECT IDEA , MINOR PROJECT IDEA, MAJOR SOLUTION , MINOR SOLUTION , Assignments, EASY WAY TO DO ASSIGNMENTS , ONLINE ASSIGNMENT SOLUTION , COLLEGE ASSIGNMENT , TIPS , ENGINEERING PROJECTS, ACER , HP DELL , INTEL, AMD, RYZEN , I5, I10, SAMSUMNG , H&M, ZARA , HTC , W3SCHOOL, MERN , NODE, ONLINE IDE, VISUAL STUDIO , CODING NINJA , MEGA CODING COURSES , RECURTMENT TEST , RESUME , WORK EXPERIENCE, JOB IN HAND , GOVERMENT JOB, PRIVATE JOB, LEVER JOB , SOFTWARE ,SOFTWARE ENGINEER, SOFTWARE ENGINEERING, IIT , NIT , AKTU, BTEUP, CODIYAPA, MIT , CODIYAPA, CODIYAPA, CODIYAPA, CODIYAPA, CODIYAPA, CODIYAPA, CODIYAPA, CODIYAPA, CODIYAPA, CODIYAPA, CODIYAPA, CODIYAPA, CODIYAPA, CODIYAPA">
+  <meta name="description" content="Codiyapa is a platform where we help people to get job by solving their online recruitment tests. We are not selling course, we are selling answers">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Codiyapa</title>
+  <link rel="icon" href="public/images/codiyapa.png" type="image/x-icon">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="brand"><span>CoDiYaPa</span> Community</h1>
+    <div class="wrapper animated bounceInLeft">
+      <div class="company-info">
+        <h3><i class="fa fa-handshake-o"></i> Services</h3>
+        <ul>
+          <li><i class="fa fa-code"></i> Coding Solution</li>
+          <li><i class="fa fa-file-code-o"></i> College Project</li>
+          <li><i class="fa fa-pencil-square-o"></i> Assignment</li>
+          <li><i class="fa fa-lightbulb-o"> Reasoning & Aptitude</i></li>
+        </ul>
+      </div>
+      <div class="contact">
+
+      <% if(success != ''){ %>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong> Form Subitted! </strong>Our Team will contact you soon.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      <% } %>
+        <h3>Contact Information</h3>
+        <form method="POST" action="send">
+          <p>
+            <label>Name</label>
+            </i><input required type="text" name="name" placeholder="Enter your name">
+          </p>
+          <p>
+            <label>Whatsapp Number</label>
+            <input required type="text" name="phone" placeholder="No advertisment will flash on your phone.">
+          </p>
+          <p>
+            <label>Email Address</label>
+            <input required type="email" name="email" placeholder="abc@xyz.com">
+          </p>
+          <p>
+            <label>Service</label>
+            <select name="service" id="service" required>
+              <option value="">Select what you need</option>
+              <option value="Coding Solution">Coding Solution</option>
+              <option value="College Project">College Project</option>
+              <option value="College Assignment">College Assignment</option>
+              <option value="Reasoning & Aptitude">Reasoning & Aptitude</option>
+              <option value="Other">Other</option>
+            </select>
+          </p>
+          <p id="date-para">
+            <label id="date-label">Date</label>
+            <input type="date" name="date" placeholder="Exam Date">
+          </p>
+          <p id="company-para">
+            <label>Company</label>
+            <input type="text" name="company" placeholder="Exam Company name">
+          </p>
+          <p id="project-type-para">
+            <label>Project Type</label>
+            <select name="ProjectType" id="projectType">
+              <option value="">Select your Project Type</option>
+              <option value="minor">Minor Project</option>
+              <option value="major">Major Project</option>
+              <option value="Other">Other</option>
+            </select>
+          </p>
+          <p id="semester-para">
+            <label>Semeseter</label>
+            <select name="semeseter" id="semeseter">
+              <option value="">Select your Semester</option>
+              <option value="1">1st Sem</option>
+              <option value="2">2nd Sem</option>
+              <option value="3">3rd Sem</option>
+              <option value="4">4th Sem</option>
+              <option value="5">5th Sem</option>
+              <option value="6">6th Sem</option>
+              <option value="7">7th Sem</option>
+              <option value="8">8th Sem</option>
+              <option value="Other">Other</option>
+            </select>
+          </p>
+          <p id="time-para">
+            <label id="time-label">Exam Time / Slot</label>
+            <input type="time" name="time" placeholder="Exam Date">
+          </p>
+          <p class="full">
+            <label>Description</label>
+            <textarea required name="message" rows="5" placeholder="Please select a service" id="placeholder"></textarea>
+          </p>
+          <p class="full">
+            <button type="submit">Submit</button>
+          </p>
+        </form>
+      </div> 
+    </div>
+  </div>
+  <script>
+    window.onload = function fn(){
+    var a = document.getElementById("service");
+    a.addEventListener('change', function(){
+        if (a.value === "Coding Solution"){ 
+          document.getElementById("time-para").style.display = "block";
+          document.getElementById("date-para").style.display = "block";
+          document.getElementById("company-para").style.display = "block";
+          document.getElementById("date-label").innerHTML = "Exam Date";
+          document.getElementById("project-type-para").style.display = "none";
+          document.getElementById("semester-para").style.display = "none";
+          document.getElementById("placeholder").placeholder = "Tell us about your exam details like exam structure, exam name and job role...";
+        }
+        else if (a.value === "College Project"){
+          document.getElementById("company-para").style.display = "none";
+          document.getElementById("time-para").style.display = "none";
+          document.getElementById("date-para").style.display = "block";
+          document.getElementById("semester-para").style.display = "none";
+          document.getElementById("project-type-para").style.display = "block";
+          document.getElementById("date-label").innerHTML = "Project Deadline Date";
+          document.getElementById("placeholder").placeholder = "Tell us more about your project like project name, how you want it, or anything you wanna inform us...";
+        }
+        else if (a.value === "College Assignment"){
+          document.getElementById("company-para").style.display = "none";
+          document.getElementById("date-para").style.display = "block";
+          document.getElementById("time-para").style.display = "none";
+          document.getElementById("project-type-para").style.display = "none";
+          document.getElementById("semester-para").style.display = "block";
+          document.getElementById("date-label").innerHTML = "Assignment Submission Date";
+          document.getElementById("placeholder").placeholder = "Tell us more about your project like assignment name, how you want it, or anything you wanna inform us...";
+        }
+        else if (a.value === "Reasoning & Aptitude"){
+          document.getElementById("date-para").style.display = "block";
+          document.getElementById("semester-para").style.display = "none";
+          document.getElementById("project-type-para").style.display = "none";
+          document.getElementById("time-para").style.display = "block";
+          document.getElementById("date-label").innerHTML = "Exam Date";
+          document.getElementById("placeholder").placeholder = "Tell us about your exam details like exam structure, exam name, number of questions and job role...";
+        }
+        else{
+          document.getElementById("company-para").style.display = "none";
+          document.getElementById("semester-para").style.display = "none";
+          document.getElementById("project-type-para").style.display = "none";
+          document.getElementById("time-para").style.display = "none";
+          document.getElementById("date-para").style.display = "none";
+          document.getElementById("placeholder").placeholder = "Let us know about what type of service you need or ask any query...";
+        }
+      });
+    }
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
